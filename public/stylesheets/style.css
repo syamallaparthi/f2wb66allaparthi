@@ -7,13 +7,16 @@ a {
   color: #00B7FF;
 }
 
+table, td {
+  border: 1px solid black;
+}
+
 table {
   border-collapse: collapse;
-  border: 1px solid black;
-  width: 20%;
+  width: 10%;
 }
+
 td {
   text-align: center;
-  border: 1px solid black;
 }
 
