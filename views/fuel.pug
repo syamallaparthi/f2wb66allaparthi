@@ -5,7 +5,10 @@ block content
   - var results = [{Category: "Petrol", Color: "Gold" , Quantity: 5},{Category: "Diesel", Color: "Light Green" , Quantity: 4},{Category: "Ethanol", Color: "clear colorless" , Quantity: 3}]
   div(class = "container-fluid")
    div(class = "row")
-    each item in results
-     div(class = "col-sm-2") Category: #{item["Category"]}<br>
-     div(class = "col-sm-2") Color: #{item["Color"]}<br>
-     div(class = "col-sm-2") Quantity: #{item["Quantity"]}
+    each item, index in results
+     div.col-sm-2(onclick=`buy(${index})`) Category: #{item["Category"]} <br> Color: #{item["Color"]} <br> Quantity: #{item["Quantity"]}
+
+  script. 
+    function buy(index) {
+        alert("You purchased item " + index + ".")
+    } 
